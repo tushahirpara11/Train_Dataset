@@ -67,7 +67,7 @@ function Distance(arrayDistance) {
 }
 
 function maxDistance(arrMaxDistance) {
-   Display(arrMaxDistance);
+   console.log(JSON.stringify(arrMaxDistance));
 }
 
 function minDistace(arrMinDistance) {
@@ -86,7 +86,7 @@ function processData() {
       if (process.argv[2] === '1') {
          MyData.forEach(ele => {
             findTrain.push(ele['trainname']);
-         });
+         });         
          console.log("Total number of Trains : " + getUnique(findTrain));
          Display(MyData);
          console.log(table.toString());
@@ -94,8 +94,6 @@ function processData() {
       else if (process.argv[2] === '2') {
          Distance(MyData);
          console.log("Maximum distance is:");
-         
-         console.log(table.toString());
          maxDistance(MyData[finalDitance.indexOf(Math.max.apply(Math, finalDitance))]);
 
       }
